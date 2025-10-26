@@ -1,65 +1,60 @@
-import { useState, useEffect } from "react";
-
+// Menghapus import useState dan useEffect karena tidak lagi digunakan
 const Navbar = () => {
-  const [active, setActive] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 150) {
-        setActive(true);
-      } else {
-        setActive(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // Menghapus logika state 'active' dan useEffect untuk scroll
 
   return (
-    <div className="navbar py-7 flex item-center justify-between">
+    // Menggunakan 'items-center' untuk perataan vertikal
+    <div className="navbar py-7 flex items-center justify-between">
       <div className="logo">
         <a href="#">
           <img
-            src="../../public/assets/Tirta-Moedal-Logo.png"
+            // Memperbaiki path logo untuk aset di folder 'public' Vite
+            src="/assets/Tirta-Moedal-Logo.png"
             alt="Logo"
-            className="h-9 w-34 mt-4 ml-2"
+            // Menyesuaikan ukuran logo dan menghapus margin
+            className="h-10 w-auto"
           />
         </a>
       </div>
-      <ul
-        className={`menu flex item-center sm:gap-10 gap-2 md:static fixed left-1/2 -translate-x-1/2 md:-translate-x-0 md:opacity-100 bg-blue/30 backdrop-blur-md p-4 rounded-br-2xl rounded-bl-2xl md:bg-transparent transition-all md-transition-none ${
-          active ? "top-0 opacity-100" : "-top-10 opacity-0"
-        }`}
-      >
-        <li>
-          <a href="#" className="sm:text-lg text-base font-light">
-            Beranda
-          </a>
-        </li>
-        <li>
-          <a href="#" className="sm:text-lg text-base font-light">
-            Tentang
-          </a>
-        </li>
-        <li>
-          <a href="#" className="sm:text-lg text-base font-light">
-            Produk
-          </a>
-        </li>
-        <li>
-          <a href="#" className="sm:text-lg text-base font-light">
-            Outlet
-          </a>
-        </li>
-        <li>
-          <a href="#" className="sm:text-lg text-base font-light">
-            Kontak
-          </a>
-        </li>
-      </ul>
+
+      {/* Div baru untuk mengelompokkan menu navigasi dan tombol */}
+      <div className="flex items-center gap-10">
+        <ul
+          // Menghapus semua class untuk sticky/mobile dan menggantinya dengan flex
+          className="flex items-center gap-10"
+        >
+          <li>
+            <a
+              href="#"
+              className="sm:text-lg text-base font-light text-gray-700 hover:text-cyan-800"
+            >
+              Beranda
+            </a>
+          </li>
+          {/* Menggabungkan Produk dan Outlet */}
+          <li>
+            <a
+              href="#"
+              className="sm:text-lg text-base font-light text-gray-700 hover:text-cyan-800"
+            >
+              Produk & Outlet
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="sm:text-lg text-base font-light text-gray-700 hover:text-cyan-800"
+            >
+              Kontak
+            </a>
+          </li>
+        </ul>
+
+        {/* Tombol "Daftar Agen" baru ditambahkan */}
+        <button className="bg-cyan-900 text-white font-medium px-5 py-2 rounded-full hover:bg-cyan-800 transition-colors">
+          Daftar Agen
+        </button>
+      </div>
     </div>
   );
 };
