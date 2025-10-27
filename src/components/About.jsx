@@ -33,16 +33,16 @@ const About = () => {
       {/* --- Bagian Card Fitur --- */}
       <div className="container mx-auto space-y-8 px-4">
         {/* Card 1: Sumber Air Alami */}
-        <div className="bg-[#C6F2FF] rounded-xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 justify-start">
+        <div className="bg-[#C6F2FF] rounded-xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 mr-70">
           <div className="flex justify-center">
             <img
               src="/assets/hydro-power.png"
               alt="Sumber Air Alami"
-              className="w-full max-w-xs"
+              className="w-[50%] max-w-xs mr-15"
             />
           </div>
-          <div>
-            <h3 className="text-3xl font-bold text-cyan-900 mb-3">
+          <div className="flex flex-col justify-center">
+            <h3 className="text-[40px] font-[400] text-cyan-900 mb-3">
               Sumber Air Alami
             </h3>
             <p className="text-gray-600">
@@ -55,9 +55,9 @@ const About = () => {
         </div>
 
         {/* Card 2: Kesegaran Air Mineral */}
-        <div className="bg-[#C6F2FF] rounded-xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-3xl font-bold text-cyan-900 mb-3">
+        <div className="bg-[#C6F2FF] rounded-xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 ml-70">
+          <div className="flex flex-col justify-center">
+            <h3 className="text-[40px] font-[400] text-cyan-900 mb-3">
               Kesegaran Air Mineral
             </h3>
             <p className="text-gray-600">
@@ -71,22 +71,22 @@ const About = () => {
             <img
               src="/assets/mountain.png"
               alt="Kesegaran Air Mineral"
-              className="w-full max-w-sm" // Dibuat sedikit lebih besar
+              className="w-[70%] max-w-sm"
             />
           </div>
         </div>
 
         {/* Card 3: Komitmen Kualitas */}
-        <div className="bg-[#C6F2FF] rounded-xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="bg-[#C6F2FF] rounded-xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 mr-70">
           <div className="flex justify-center">
             <img
               src="/assets/diamond2.png"
               alt="Komitmen Kualitas"
-              className="w-full max-w-xs"
+              className="w-[70%] max-w-xs mr-15"
             />
           </div>
-          <div>
-            <h3 className="text-3xl font-bold text-cyan-900 mb-3">
+          <div className="flex flex-col justify-center">
+            <h3 className="text-[40px] font-[400] text-cyan-900 mb-3">
               Komitmen Kualitas
             </h3>
             <p className="text-gray-600">
