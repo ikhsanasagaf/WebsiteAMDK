@@ -1,7 +1,26 @@
 @import "tailwindcss";
 
 @layer base {
-  body {
+  :root {
     font-family: "Work Sans", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F4F7F5; /* Warna background utama */
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+  }
+
+  /* Pastikan elemen root React juga full width */
+  #root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
   }
 }

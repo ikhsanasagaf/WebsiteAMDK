@@ -6,13 +6,12 @@ import Beranda from "./pages/Beranda";
 import ProdukOutlet from "./pages/ProdukOutlet";
 import Kontak from "./pages/Kontak";
 import DaftarAgen from "./pages/DaftarAgen";
+import Chatbot from "./components/Chatbot/Chatbot";
 
 function App() {
   return (
     <>
-      <div className="container mx-auto">
-        <Navbar />
-      </div>
+      <Navbar />
 
       <main>
         <Routes>
@@ -23,6 +22,7 @@ function App() {
 
         </Routes>
       </main>
+      <Chatbot />
 
       <Footer />
     </>
