@@ -23,7 +23,7 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse }) => {
 
       generateBotResponse([
         ...chatHistory,
-        { role: "user", text: `Dengan data yang sudah diberikan, tolong jawab pertanyaan user :" ${userMessage}` },
+        { role: "user", text: userMessage },
       ]);
     }, 600);
   };
